@@ -1,0 +1,207 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% Colors
+\definecolor{numeralblue}{RGB}{0, 51, 102}
+\definecolor{successgreen}{RGB}{20, 120, 20}
+\definecolor{failurecrimson}{RGB}{180, 20, 20}
+
+% Page Geometry & Headers
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=25mm,
+ top=25mm,
+}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{Quadratic War} - Official Rules}
+\lhead{Numeral Maths Club}
+\cfoot{\thepage}
+
+\title{
+    \vspace{1cm}
+    \Huge \textbf{Quadratic War} \\ 
+    \Large \textit{The Battle of Real and Complex Roots} \\
+    \vspace{0.5cm}
+    \large Game Design \& Copyright Document
+}
+\author{
+    \textbf{Numeral Maths Club} \\ 
+    TRK Higher Secondary School \\ 
+    Vaniyamkulam, Palakkad, Kerala
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+    \noindent \textbf{Quadratic War} is an advanced educational strategy game that bridges the gap between abstract algebraic concepts and tangible tactical gameplay. By mapping polynomial degrees to movement capabilities and using the quadratic discriminant as a combat resolution mechanism, the game builds an intuitive understanding of the nature of roots. This document serves as the official record of the game's mechanics, philosophy, and copyright.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Educational Philosophy}
+The core design philosophy of \textit{Quadratic War} is the physical manifestation of mathematical properties.
+
+\begin{itemize}
+    \item \textbf{Degrees of Freedom vs. Degree of Equation}: In mathematics, higher-degree polynomials are more complex and powerful. In the game, this is represented by movement range. A quadratic term ($x^2$, degree 2) has higher mobility than a linear term ($x$, degree 1), which in turn is more mobile than a constant ($c$, degree 0).
+    \item \textbf{The Discriminant as Destiny}: Students often learn $\Delta = B^2 - 4AC$ by rote. In this game, $\Delta$ determines survival. It transforms an abstract formula into a life-or-death strategic check.
+\end{itemize}
+
+\section{Game Components \& Setup}
+
+\subsection{ The Battlefield}
+The game is played on a grid of \textbf{9 Rows $\times$ 8 Columns}. 
+\begin{itemize}
+    \item Players start at opposite ends of the board.
+\end{itemize}
+
+\subsection{The Armies}
+Two players, \textbf{Red} and \textbf{Blue}, each command an army of algebraic terms.
+
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\textbf{Piece Types \& Movement Classes}
+\begin{itemize}
+    \item \textbf{The Constant ($c$)}: \textit{Degree 0}.
+    \begin{itemize}
+        \item \textbf{Movement}: 1 square forward vertically.
+        \item \textbf{Role}: The infantry. Slow, but essential for forming valid equations.
+    \end{itemize}
+    
+    \item \textbf{The Linear ($bx$)}: \textit{Degree 1}.
+    \begin{itemize}
+        \item \textbf{Movement}: Up to 2 squares in Cardinal directions (Horizontal/Vertical).
+        \item \textbf{Role}: The cavalry. Flexible connectors that bridge the gap between heavy hitters and support.
+    \end{itemize}
+    
+    \item \textbf{The Quadratic ($ax^2$)}: \textit{Degree 2}.
+    \begin{itemize}
+        \item \textbf{Movement}: Up to 3 squares in Any direction (Cardinal + Diagonal).
+        \item \textbf{Role}: The artillery. powerful, long-range units that dictate the flow of battle.
+    \end{itemize}
+\end{itemize}
+\end{minipage}
+}
+\vspace{0.5cm}
+
+\textit{Note: Pieces cannot jump over other pieces.}
+
+\section{Combat Mechanics: The Equation Engine}
+
+Unlike traditional games where capture is by displacement, capture in \textit{Quadratic War} is by \textbf{Alignment and Calculation}.
+
+\subsection{Trigger Condition}
+Combat is triggered automatically at the end of a turn if:
+\begin{enumerate}
+    \item A contiguous line of \textbf{2 or more pieces} is formed (Horizontal, Vertical, or Diagonal).
+    \item The line contains pieces from \textbf{both players}.
+\end{enumerate}
+
+\subsection{Resolution Process}
+When a valid chain is detected, the game "solves" the skirmish:
+
+\textbf{Step 1: Coefficient Summation} \\
+All terms in the chain are summed to create a single quadratic equation of the form:
+\[ Ax^2 + Bx + C = 0 \]
+Where:
+\begin{itemize}
+    \item $A = \sum$ Coefficients of $x^2$ terms.
+    \item $B = \sum$ Coefficients of $x$ terms.
+    \item $C = \sum$ Constant terms.
+\end{itemize}
+
+\textbf{Step 2: The Discriminant Check} \\
+Calculate the discriminant:
+\[ \Delta = B^2 - 4AC \]
+
+\textbf{Step 3: The Outcome}
+
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\textbf{\textcolor{successgreen}{Scenario A: Real Roots ($\Delta \ge 0$)}} \\
+The equation yields real solutions. The attack is \textbf{VALID}.
+\begin{center}
+    \textbf{Result: OPPONENT'S pieces in the chain are ELIMINATED.}
+\end{center}
+\end{minipage}
+}
+\vspace{0.5cm}
+
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\textbf{\textcolor{failurecrimson}{Scenario B: Complex Roots ($\Delta < 0$)}} \\
+The equation yields complex (imaginary) solutions. The attack \textbf{FAILS}.
+\begin{center}
+    \textbf{Result: ACTIVE PLAYER'S pieces in the chain are ELIMINATED (Self-Destruct).}
+\end{center}
+\end{minipage}
+}
+
+\section{Combat Examples}
+
+\subsection{Example 1: The Successful Flank}
+\textbf{Red} moves a $-4x$ next to Blue's $2x^2$ and $2$.
+\begin{itemize}
+    \item \textbf{Chain}: $\{2x^2 (\text{Blue}), -4x (\text{Red}), 2 (\text{Blue})\}$
+    \item \textbf{Equation}: $2x^2 - 4x + 2 = 0$
+    \item \textbf{Coefficients}: $A=2, B=-4, C=2$
+    \item \textbf{Discriminant}: $\Delta = (-4)^2 - 4(2)(2) = 16 - 16 = 0$
+    \item \textbf{Result}: $\Delta \ge 0$. Real Roots. \textbf{Red wins}. Blue's $2x^2$ and $2$ are removed.
+\end{itemize}
+
+\subsection{Example 2: The Strategic Blunder}
+\textbf{Blue} moves a $1$ (Constant) to block Red's $x^2$.
+\begin{itemize}
+    \item \textbf{Chain}: $\{x^2 (\text{Red}), 1 (\text{Blue})\}$
+    \item \textbf{Equation}: $1x^2 + 0x + 1 = 0$
+    \item \textbf{Coefficients}: $A=1, B=0, C=1$
+    \item \textbf{Discriminant}: $\Delta = 0^2 - 4(1)(1) = -4$
+    \item \textbf{Result}: $\Delta < 0$. Complex Roots. \textbf{Blue fails}. Blue's own piece (the $1$) is removed due to instability.
+\end{itemize}
+
+\section{Strategic Guidelines}
+
+\subsection{Controlling the Determinant}
+Victory lies in manipulating $B^2 - 4AC$.
+\begin{itemize}
+    \item \textbf{To Attack}: Maximize $B^2$ or make $AC$ negative.
+    \item \textbf{To Defend}: Force your opponent into situations where $AC$ is large and positive, and $B$ is small.
+\end{itemize}
+
+\textbf{The "Sign" Rule}:
+If $A$ and $C$ have opposite signs (e.g., $2x^2$ and $-5$), then $-4AC$ becomes positive. $\Delta$ will \textit{always} be positive.
+\textit{Strategic Implication}: Attacking an opponent's positive quadratic with a negative constant is always a safe, successful move.
+
+\section{Copyright \& Legal}
+
+\textbf{\copyright \ \the\year \ Numeral Maths Club} \\
+\textbf{TRK Higher Secondary School, Vaniyamkulam, Palakkad, Kerala}
+
+All rights reserved.
+
+The concept, rule set, game mechanics, and underlying logical system of "Quadratic War" are the exclusive intellectual property of the Numeral Maths Club. 
+
+This game was developed to foster mathematical intuition through interactive play. Unauthorized commercial reproduction, distribution, or adaptation of this game system without written permission from the copyright holders is strictly prohibited.
+
+\vspace{2cm}
+
+\begin{center}
+    \textit{Document generated for Copyright Claim Registration.}
+\end{center}
+
+\end{document}
